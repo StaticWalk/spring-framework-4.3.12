@@ -17,7 +17,7 @@ public class BeanFactoryTest {
 	public void testSimpleLoad(){
 
 		ApplicationContext ac = new ClassPathXmlApplicationContext("bean/beanFactoryTest.xml");
-		ac.getBean(MyTestBean.class);
+		ac.getBean(com.xxy.bean.MyTestBean.class);
 
 //		BeanFactory bf=new XmlBeanFactory(new ClassPathResource("bean/beanFactoryTest.xml"));
 //		MyTestBean bean= (MyTestBean) bf.getBean("myTestBean");

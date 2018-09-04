@@ -191,7 +191,10 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 		final String beanName = transformedBeanName(name);
 		Object bean;
 
-		//检查缓存中或者事件工厂中是否有对应实例（解决循环依赖的问题） Spring创建bean的原则是不等bean创建完成就会提前曝光创建bean的ObjectFactory，将ObjectFactory加入到缓存当中，一旦下个bean创建时需要上个bean直接使用ObjectFactory   直接尝试从缓存获取或者从singletonFactories中的ObjectFactory中获取
+		//检查缓存中或者事件工厂中是否有对应实例（解决循环依赖的问题）
+		// Spring创建bean的原则是不等bean创建完成就会提前曝光创建bean的ObjectFactory，
+		// 将ObjectFactory加入到缓存当中，一旦下个bean创建时需要上个bean直接使用ObjectFactory
+		//  直接尝试从缓存获取或者从singletonFactories中的ObjectFactory中获取
 		// Eagerly check singleton cache for manually registered singletons.
 
 		Object sharedInstance = getSingleton(beanName);

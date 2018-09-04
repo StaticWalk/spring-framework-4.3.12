@@ -1,4 +1,4 @@
-package com.xxy.ioc;
+package main.java.com.xxy.ioc;
 
 /**
  * Created by xiongxiaoyu
