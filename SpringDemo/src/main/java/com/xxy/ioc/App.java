@@ -1,4 +1,4 @@
-package main.java.com.xxy.ioc;
+package com.xxy.ioc;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,7 +12,7 @@ public class App
 {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("ioc/spring-config.xml");
-		UserService userService = (UserService) applicationContext.getBean("userService");
+		main.java.com.xxy.ioc.UserService userService = (main.java.com.xxy.ioc.UserService) applicationContext.getBean("userService");
 		userService.login();
 	}
 }
