@@ -121,6 +121,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
 	private static Class<?> javaxInjectProviderClass = null;
 
+	//DefaultListableBeanFactory工厂提供类加载器
 	static {
 		try {
 			javaUtilOptionalClass =

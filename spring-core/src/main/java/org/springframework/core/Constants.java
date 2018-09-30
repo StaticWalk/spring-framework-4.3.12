@@ -16,15 +16,11 @@
 
 package org.springframework.core;
 
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-
 import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;
+
+import java.lang.reflect.Field;
+import java.util.*;
 
 /**
  * This class can be used to parse other classes containing constant definitions
@@ -59,6 +55,7 @@ public class Constants {
 	 * @throws IllegalArgumentException if the supplied {@code clazz} is {@code null}
 	 */
 	public Constants(Class<?> clazz) {
+		//默认情况，JVM关闭断言 -ea开启  功能类似if
 		Assert.notNull(clazz, "Class must not be null");
 		this.className = clazz.getName();
 		Field[] fields = clazz.getFields();
