@@ -12,7 +12,7 @@ public class App
 {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("ioc/spring-config.xml");
-		main.java.com.xxy.ioc.UserService userService = (main.java.com.xxy.ioc.UserService) applicationContext.getBean("userService");
+		com.xxy.ioc.UserService userService = (com.xxy.ioc.UserService) applicationContext.getBean("userService");
 		userService.login();
 	}
 }
